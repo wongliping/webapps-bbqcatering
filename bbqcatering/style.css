@@ -1,0 +1,610 @@
+/* =============================== LAYOUT ========================================= */
+html, body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+}
+
+.title {
+    font: 100 25px/1.3 'Oleo Script', Helvetica, sans-serif;
+}
+
+#bbqlogo {
+    width: 220px;
+}
+
+#cartlogo {
+    height: 26px;
+    vertical-align: bottom;
+}
+
+#content, #navbar, footer, header {
+    min-width: 1000px;
+}
+
+#wrapper {
+    background-color:white;
+    /* width: 100%;
+    margin: auto;
+    min-width: 850px; */
+    height: auto !important;
+    min-height: 100vh;
+    position: relative;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+footer {
+    color:black;
+    padding-top: 5px;
+    padding-bottom:5px;
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    background-color:#d3d3d3;
+    opacity: 0.80;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;
+}
+
+footer a{
+    color:black;
+    text-decoration: none;
+}
+
+.headingFormat {
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    word-spacing: 9px;
+}
+
+.caps {
+    text-transform: capitalize;
+}
+
+/* =============================== NAVIGATION BAR ========================================= */
+
+nav {
+    font: 100 20px/1.3 'Oleo Script', Helvetica, sans-serif;
+}
+
+nav ul {
+  
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    width:100%;
+    display:inline-block;
+}
+
+nav li {
+    color: #fff;
+ background-color: #DD6668;
+    display: block;
+    float: left;
+    padding-bottom: 1rem;
+    padding-top:1rem;
+    position: relative;
+    text-decoration: none;
+  transition-duration: 0.5s;
+  width:16.66%;    /*100/no of tabs*/
+    text-align: center;
+}
+  
+nav li a {
+    color: white;
+    /*increase clickable area*/
+    padding: 20px 35x; 
+    text-decoration: none;
+  }
+  
+
+nav li:hover {
+    background-color: #a5292b;
+    cursor: pointer;
+}
+
+ul li ul {
+    background-color: #DD6668;
+    visibility: hidden;
+  opacity: 0;
+  min-width: 16.6%;
+    position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+    left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul, /* this is the line we add */
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+    clear: both;
+  width: 100%;
+}
+
+/* =============================== HOME PAGE ======================================*/
+#bbqmeat{
+    height:230px;
+    width:400px;
+    float:right;
+/*    padding-left:10px;*/
+    border-radius: 15px;
+}
+
+
+.clearfix{
+    overflow:auto;
+    padding-bottom:40px;
+    padding-left:50px;
+    padding-right:50px;
+   /* list-style-position: inside;*/
+}
+
+#bbqstingray{
+    height:230px;
+    width:400px;
+    float:left;
+/*    padding-right:20px;*/
+    border-radius: 15px;
+}
+/*=============================== MENU =====================================*/
+/* Style the tab */
+.displayflex{
+    display:flex;
+}
+
+.tab {
+    float: left;
+    width: 25%;
+}
+
+.tabcontent {
+    width: 80%;
+    height: inherit;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: #ccc;
+    padding-bottom:20px;
+    padding-right:20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size:18px;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    color: black;
+}
+
+/* Style the tab content */
+#bbqfoodimage{
+    height:150px;
+    width:150px;
+/*    padding-left:10px;*/
+    border-radius: 15px;
+}
+.itemwrap{
+    padding-left:30px;
+    display:inline-block;
+    width:150px;       
+}
+.addBtn {
+    border: 0.8px solid #797575;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    color: black;
+    margin: 0px 5px;
+    background-color: white;
+}
+.qtyBtn {
+    border: 0.8px solid #797575;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    color: black;
+    margin: 0 5px;
+    background-color: white;
+    width:55px;
+    text-align: center;
+}
+.foodtitle{
+    text-align:center;
+    font-weight:bold;
+    margin-top:0px;
+    margin-bottom:10px;
+    text-transform: capitalize;
+}
+
+.foodprice{
+    text-align:center;
+    font-weight:bold;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+#content-menu {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;   /*prevent footer from misaligning when zoomed in*/
+/*    min-height:inherit;*/
+    min-width:1000px;
+}
+
+.menubuttonalign{
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:20px;
+}
+
+.tablinks {
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    word-spacing: 9px;
+}
+
+/* =============================== CHECK OUT / FEEDBACK ===================================== */
+
+#checkoutForm, #feedbackForm, #signupForm {
+    width: 60%;
+    margin: auto;
+}
+
+/* div to separate types of info */
+.checkoutInfo, .feedbackInfo, .signupInfo {
+    margin: 0 0 50px 0;
+}
+
+input[type="text"], input[type="date"], input[type="email"], input[type="password"], textarea {
+    width: 90%;
+    display: block;
+    margin : 10px auto;
+    padding: 4px 4px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: none;
+}
+
+/* placeholder for date input */
+input[type="date"]::before { 
+    content: attr(placeholder);
+    width: 100%;
+    color: #797575;
+}
+
+/* hide placeholder text when in focus to show the default
+ * 'dd/mm/yyyy' value
+ */
+input[type="date"]:focus::before,
+input[type="date"]:valid::before { 
+    display: none; 
+    width: 100%;
+}
+
+
+/* hide radio btn */
+input[type="radio"] {
+    display: none;
+}
+
+input:checked + label {
+    color: white;
+    background-color: #504f4f;
+}
+
+.timeLbl {
+    border: 0.8px solid black;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 4px 4px;
+    color: #797575;
+    margin: 0 15px;
+}
+
+#timeDiv {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#checkoutForm a, #feedbackForm a {
+    color: #6e6e6e;
+    text-decoration: none;
+}
+
+.submitBtn {
+    border: 0.8px solid #9A9A9A;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    color: black;
+    margin: 0 15px;
+    background-color: white;
+    float: right;
+    margin-right: 4%;
+}
+
+.errorMsg {
+    width: 90%;
+    display: block;
+    margin : 0 auto;
+    color: red;
+    font-size: 0.9em;
+}
+
+/* =============================== THANK YOU ====================================== */
+#thankyoudiv {
+    border: 1px dashed #d3d3d3;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    text-align: center;
+}
+
+/* =============================== CHECK ORDER ==================================== */
+
+#checkorderForm {
+    width: 80%;
+    display: block;
+    /* margin-left:10%; */
+    margin: 10px auto 50px;
+}
+
+ #checkorderForm div {
+    width: 90%;
+    display: block;
+    margin : 10px auto;
+    /* clear: both; */
+}
+
+#checkorderForm div input[type="email"] {
+    width: 100%;
+    margin: 0;
+}
+
+#checkorderForm div input[type="text"] {
+    width: 85%;
+    display: inline-block;
+    /* float: left; */
+}
+
+#checkorderForm div button {
+    width: 12%;
+    /* float: right; */
+    padding: 4px 4px;
+    margin: 10px 0;
+    /* clear: both; */
+}
+
+#orderResult {
+    width:80%;
+    margin: 10px auto;
+    display: block;
+    /* visibility: hidden; */
+}
+
+#orderResult table {
+    border-spacing: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#orderResult th, #orderResult td {
+    text-align: center;
+    padding:10px;
+}
+
+#orderResult a {
+    text-decoration: none;
+    padding: 4px 4px;
+    color: black;
+    margin: 0;
+    float: none;
+    display: inline-block;
+}
+
+/* =============================== CONTACT US ===================================== */
+#contact {
+    width:80%;
+    margin:0 auto 50px;
+}
+
+#contact-left {
+    width: 50%;
+    float: left;
+}
+
+#contact-right {
+    width: 50%;
+    height: inherit;
+    float: left;
+    line-height: 35px;
+}
+
+#contact-left img {
+    max-width:90%;
+    max-height:100%;
+    width: auto;
+}
+
+#contact-right img {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 20px;
+    vertical-align: top;
+    padding-top: 10px;
+    /* display:inline-block; */
+}
+
+#contact-right span {
+    display:inline-block;
+}
+
+/* =============================== CART ===================================== */
+#cart{
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    border-spacing: 0;
+    border-bottom: 1px solid black;
+}
+
+#cart th,td{
+    text-align:center;
+    padding:10px;
+}
+
+th{
+    border-bottom: 1px solid black;
+
+}
+
+#cartQtyUpdate, #cartQtyUpdate_db{
+    width:40px;
+    font-size:16px;
+    text-align: center;
+}
+
+#bottomcart td{
+    border-top: 1px solid black;
+    text-align:right;
+}
+
+.cartBtn {
+    border: 0.8px solid #9A9A9A;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    color: black;
+    margin: 0 5px;
+    background-color: white;
+}
+
+#grandtotalalign{
+    margin-left:70%;
+    padding: 30px 0 10px 40px;
+    font-weight: bold;
+}
+
+#alignbuttons{
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 10%;
+}
+
+#dltItemBtn {
+    border:none;
+    display:inline;
+    background:white;
+    font-size:20px;
+    /* text-decoration: none; */
+}
+
+#updateQtyBtn, #updateQtyBtn_db {
+    display:none;
+}
+
+
+/*=============================== LOGIN =====================================*/
+/*Form styles*/
+#loginform label{
+    float: left;
+    display: block;
+    text-align: right;
+    width: 120px;
+    padding-right: 10px;
+}
+
+#loginform{
+    width:350px;
+}
+
+/*Display each element as a block element like <p>*/
+#loginform input
+{
+    display: block;
+    margin-bottom: 20px;  
+    width: 200px;
+    margin : 0px;
+    padding: 4px 4px;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: none;
+    border: 1px solid;
+}
+
+#loginBtn {
+    border: 0.8px solid #9A9A9A;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 8px 8px;
+    color: black;
+    margin: 0 15px;
+    background-color: white;
+    float: right;
+    margin-right: 4%;
+
+}
+
+#signuplink{
+    font-size:15px;
+    margin-left:10%;
+}
+
+/* ==================== FEEDBACK ===================== */
+#orderDetails {
+    width: 90%;
+    display: block;
+    margin : 10px auto;
+    padding: 1px 4px 0 4px;
+}
+
+#orderDetails .orderLbl {
+    display:inline-block;
+    width: 120px;
+    text-align: left;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+#orderDetails .orderDetail {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+/* ==================== ADMIN ===================== */
+#alignpriceUpdateBtn{
+    padding-top:10px;
+    margin-left:80%;
+
+}
+#menupriceUpdate {
+    width:80px;
+    font-size:16px;
+    text-align: center;
+}
